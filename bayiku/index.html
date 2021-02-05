@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BayiKu</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/healthTools.css">
+    <link rel="stylesheet" href="css/articleView.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- overlay search -->
+    <div class="overlay-s">
+        <div class="close-s">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="wrapper-search-s">
+            <div class="search-s">
+                <input type="text" placeholder="Cari Sesuatu...">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <!-- end overlay search -->
+
+    <!-- navbar -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">home</a></li>
+                <li class="sub-menu"><a>artikel</a>
+                    <ul>
+                        <li><a href="bayi.html">bayi</a></li>
+                        <li><a href="kehamilan.html">kehamilan</a></li>
+                        <li><a href="persalinan.html">persalinan</a></li>
+                        <li><a href="parenting.html">parenting</a></li>
+                    </ul>
+                </li>
+                <li><a href="obat.html">obat</a></li>
+                <li><a href="aboutUs.html">tentang kami</a></li>
+                <li class="sub-menu"><a>masuk/daftar</a>
+                    <ul>
+                        <li><a href="formLogin.html">masuk</a></li>
+                        <li><a href="formRegister.html">daftar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </div>
+
+        <div class="search-icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+        </div>
+    </header>
+    <!-- end navbar -->
+
+    <!-- top content -->
+    <section class="container">
+        <div class="left-side">
+
+            <section id="slider" class="container-slider">
+                <ul class="slider-wrapper">
+
+                    <li>
+                        <img src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+                            title="" alt="">
+                    </li>
+
+                    <li>
+
+                        <img src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+                            alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80"
+                            alt="">
+                    </li>
+
+
+                    <li>
+                        <img src="https://images.unsplash.com/photo-1484979045040-0ab3854b6acb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
+                            alt="">
+                    </li>
+
+                </ul>
+
+                <ul id="control-buttons" class="control-buttons">
+                    <li class="active"></li>
+                </ul>
+
+            </section>
+
+            <section class="healthToolsInHome">
+                <h3>HEALTH TOOLS</h3>
+                <hr>
+                <div class="buttonsInHome">
+                    <a><button class="btn-hover color-1" id="myBtn">Hitung berat badan ideal bayi</button></a>
+                    <a> <button class="btn-hover color-2" id="myBtn1">Hitung tinggi badan ideal
+                            bayi</button></a>
+                    <a> <button class="btn-hover color-3" id="myBtn2">Kalender Imunisasi</button></a>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- modal bbi -->
+        <div class="modalHT" id="modal">
+            <!-- form BBI -->
+            <form action="" class="cf ht" method="GET">
+                <div class="close-modal">
+                    <img src="img/close.png" alt="" srcset="">
+                </div>
+                <h2>
+                    Berat Badan Ideal Bayi
+                </h2>
+
+                <section id="fbbi">
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jenis">Jenis Kelamin</label>
+                        <select class="form-control" required>
+                            <option>-- Pilih Jenis Kelamin --</option>
+                            <option value="">Laki-Laki</option>
+                            <option value="">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label style="margin-right: 20px;" for="usia">Usia (0-24 bulan)</label>
+                        <input type="number" id="usia" class="form-control" required min="0" max="24">
+                    </div>
+
+                    <button type="submit" id="hasil" class="btn btn-primary">Cek</button>
+                </section>
+
+
+            </form>
+            <!-- end form BBI -->
+        </div>
+        <!-- end modal BBI -->
+
+        <!-- modal TBI -->
+        <div class="modalHT" id="modal1">
+            <!-- form TBI -->
+            <form action="" class="cf ht" method="GET">
+                <div class="close-modal">
+                    <img src="img/close.png" alt="" srcset="">
+                </div>
+                <h2>
+                    Tinggi Badan Ideal Bayi
+                </h2>
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama">
+                </div>
+
+                <div class="form-group">
+                    <label for="jenis">Jenis Kelamin</label>
+                    <select class="form-control">
+                        <option>-- Pilih Jenis Kelamin --</option>
+                        <option value="">Laki-Laki</option>
+                        <option value="">Perempuan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label style="margin-right: 20px;" for="usia">Usia (0-24 bulan)</label>
+                    <input type="number" id="tanggal" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="panjang">Tinggi Badan (cm)</label>
+                    <input type="number" min="0" id="panjang" class="form-control"
+                        placeholder="Masukkan Tinggi Badan Saat Lahir">
+                </div>
+                <button type="submit" id="hasil" class="btn btn-primary">Cek</button>
+            </form>
+
+            <!-- end form TBI -->
+
+        </div>
+
+        <!-- modal KI -->
+        <div class="modalHT" id="modal2">
+            <!-- form imunisasi -->
+            <form action="" class="cf ht" method="GET">
+                <div class="close-modal">
+                    <img src="img/close.png" alt="" srcset="">
+                </div>
+                <h2>
+                    Kalender Imunisasi Bayi
+                </h2>
+                <div class="form-group">
+                    <label id="nama" for="nama">Nama</label>
+                    <input type="text" id="inputNama" class="form-control" placeholder="Masukkan Nama" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label style="margin-right: 20px;" for="usia">Usia (0-24 bulan)</label>
+                    <input type="number" class="form-control" required>
+                </div>
+                <button type="submit" id="hasil" class="btn btn-primary">Cek</button>
+
+            </form>
+            <!-- end form imunisasi -->
+        </div>
+        <!-- end modal KI -->
+
+
+
+
+        <div class=" right-side">
+            <h3>ARTIKEL TERPOPULER</h3>
+            <div class="popular-article-cards">
+                <div class="pa-items-1">
+                    <a href="articleView/articleBayi/articleViewBayi01.html"> <img
+                            src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1571141836/attached_image/5-hal-tidak-terduga-yang-bisa-kamu-alami-usai-memiliki-bayi-alodokter.jpg"
+                            alt=""></a>
+
+                </div>
+                <div class="pa-items-2">
+                    <a href="articleView/articleBayi/articleViewBayi01.html">
+
+                        5 Hal Tidak Terduga yang Bisa Kamu Alami Usai Memiliki Bayi
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="popular-article-cards">
+                <div class="pa-items-1">
+                    <a href="articleView/articleKehamilan/articleViewKehamilan01.html"> <img
+                            src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1554902002/attached_image/penyebab-ukuran-perut-ibu-hamil-tampak-besar-atau-kecil-alodokter.jpg"
+                            alt=""></a>
+
+                </div>
+                <div class="pa-items-2">
+                    <a href="articleView/articleKehamilan/articleViewKehamilan01.html">
+
+                        Penyebab Ukuran Perut Ibu Hamil Tampak Besar atau Kecil
+
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="popular-article-cards">
+                <div class="pa-items-1">
+                    <a href="articleView/articleParenting/articleViewParenting01.html"> <img
+                            src="https://cdn-image.hipwee.com/wp-content/uploads/2019/06/hipwee-leisure-activity-relaxation-lying-down-playing-cute-boy-toddler-rug-casual-smartphone-technology_t20_wa0PPL-1024x576-750x422.jpg"
+                            alt=""></a>
+
+                </div>
+                <div class="pa-items-2">
+                    <a href="articleView/articleParenting/articleViewParenting01.html">
+
+                        5 Dampak Negatif Andalkan Gadget Biar Anak Diam dan Nggak Rewel
+
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="popular-article-cards">
+                <div class="pa-items-1">
+                    <a href="articleView/articlePersalinan/articleViewPaersalinan01.html"> <img
+                            src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1570950852/attached_image/takut-menghadapi-persalinan-ini-trik-mengatasinya-alodokter.jpg"
+                            alt=""></a>
+
+                </div>
+                <div class="pa-items-2">
+                    <a href="articleView/articlePersalinan/articleViewPaersalinan01.html">
+
+                        Alasan Bumil Tidak Perlu Takut Persalinan
+
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="popular-article-cards">
+                <div class="pa-items-1">
+                    <a href="articleView/articleBayi/articleViewBayi01.html"> <img
+                            src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1571141836/attached_image/5-hal-tidak-terduga-yang-bisa-kamu-alami-usai-memiliki-bayi-alodokter.jpg"
+                            alt=""></a>
+
+                </div>
+                <div class="pa-items-2">
+                    <a href="articleView/articleBayi/articleViewBayi01.html">
+
+                        5 Hal Tidak Terduga yang Bisa Kamu Alami Usai Memiliki Bayi
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="popular-article-cards">
+                <div class="pa-items-1">
+                    <a href="articleView/articlePersalinan/articleViewPaersalinan01.html"> <img
+                            src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1570950852/attached_image/takut-menghadapi-persalinan-ini-trik-mengatasinya-alodokter.jpg"
+                            alt=""></a>
+
+                </div>
+                <div class="pa-items-2">
+                    <a href="articleView/articlePersalinan/articleViewPaersalinan01.html">
+
+                        Alasan Bumil Tidak Perlu Takut Persalinan
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end top-content -->
+
+    <!-- trending topic -->
+    <section class="trending-topic cf">
+        <h2>Trending Topic</h2>
+        <a href="#">Bayi Kembar</a>
+        <a href="#">Asi Ekslusif</a>
+        <a href="#">Keguguran</a>
+        <a href="#">Anak Autis</a>
+        <a href="#">Sunat</a>
+    </section>
+    <!-- end trending topic -->
+
+    <!-- main article -->
+    <section class="article-wrapper">
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1571141836/attached_image/5-hal-tidak-terduga-yang-bisa-kamu-alami-usai-memiliki-bayi-alodokter.jpg"
+                    alt="">
+                <a class="tema tema-bayi" href="bayi.html">Bayi</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articleBayi/articleViewBayi01.html">
+                    <h3>5 Hal Tidak Terduga yang Bisa Kamu Alami Usai Memiliki Bayi</h3>
+                </a>
+                <p>Berikut adalah hal-hal tidak terduga yang bisa terjadi di kehidupan Bunda dan Ayah setelah Si Kecil
+                    terlahir ke dunia
+                </p>
+            </div>
+            <a class="selengkapnya" href="articleView/articleBayi/articleViewBayi01.html">Baca Selengkapnya</a>
+        </div>
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1554902002/attached_image/penyebab-ukuran-perut-ibu-hamil-tampak-besar-atau-kecil-alodokter.jpg"
+                    alt="">
+                <a class="tema tema-kehamilan" href="kehamilan.html">Kehamilan</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articleKehamilan/articleViewKehamilan01.html">
+                    <h3>Penyebab Ukuran Perut Ibu Hamil Tampak Besar atau Kecil</h3>
+                </a>
+                <p> Apakah Bumil tahu tidak apa yang membuat perut tampak besar atau kecil, bentuknya bulat atau
+                    melebar, dan letak perut tampak tinggi atau rendah? Nah, di bawah ini adalah beberapa hal yang dapat
+                    memengaruhi ukuran dan bentuk perut ibu hamil
+                </p>
+            </div>
+            <a class="selengkapnya" href="articleView/articleKehamilan/articleViewKehamilan01.html">Baca
+                Selengkapnya</a>
+        </div>
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://cdn-image.hipwee.com/wp-content/uploads/2019/06/hipwee-leisure-activity-relaxation-lying-down-playing-cute-boy-toddler-rug-casual-smartphone-technology_t20_wa0PPL-1024x576-750x422.jpg"
+                    alt="">
+                <a class="tema tema-parenting" href="parenting.html">Parenting</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articleParenting/articleViewParenting01.html">
+                    <h3>5 Dampak Negatif Andalkan Gadget Biar Anak Diam dan Nggak Rewel. Jangan Asal Kasih ya, Ma, Pa!
+                    </h3>
+                </a>
+                <p>Dewasa ini, hampir semua kemudahan kita dapatkan melalui teknologi yang ada. Mulai dari hal
+                    sehari-hari seperti resep masakan, memberi kabar dengan orang terdekat, melihat ramalan cuaca, dan
+                    bahkan pengasuhan anak pun menggunakan bantuan dari gadget. Namun, di balik nilai praktis dari
+                    teknologi tersebut masih tersimpan dampak yang dinilai cukup negatif dalam jangka panjang.
+                </p>
+            </div>
+            <a class="selengkapnya" href="articleView/articleParenting/articleViewParenting01.html">Baca
+                Selengkapnya</a>
+        </div>
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1571141836/attached_image/5-hal-tidak-terduga-yang-bisa-kamu-alami-usai-memiliki-bayi-alodokter.jpg"
+                    alt="">
+                <a class="tema tema-bayi" href="bayi.html">Bayi</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articleBayi/articleViewBayi01.html">
+                    <h3>5 Hal Tidak Terduga yang Bisa Kamu Alami Usai Memiliki Bayi</h3>
+                </a>
+                <p>Berikut adalah hal-hal tidak terduga yang bisa terjadi di kehidupan Bunda dan Ayah setelah Si Kecil
+                    terlahir ke dunia
+                </p>
+            </div>
+            <a class="selengkapnya" href="articleView/articleBayi/articleViewBayi01.html">Baca Selengkapnya</a>
+        </div>
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1570950852/attached_image/takut-menghadapi-persalinan-ini-trik-mengatasinya-alodokter.jpg"
+                    alt="">
+                <a class="tema tema-persalinan" href="persalinan.html">Persalinan</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articlePersalinan/articleViewPaersalinan01.html">
+                    <h3>Alasan Bumil Tidak Perlu Takut Persalinan</h3>
+                </a>
+                <p> Dari semua informasi terkait persalinan yang Bumil dengar, belum tentu semuanya benar adanya. Jika
+                    beberapa hal tersebut membuat Bumil takut, coba konsultasikan lebih lanjut ke dokter atau bidan
+                    untuk mendapatkan kepastiannya
+                </p>
+            </div>
+            <a class="selengkapnya" href="articleView/articlePersalinan/articleViewPaersalinan01.html">Baca
+                Selengkapnya</a>
+        </div>
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1554902002/attached_image/penyebab-ukuran-perut-ibu-hamil-tampak-besar-atau-kecil-alodokter.jpg"
+                    alt="">
+                <a class="tema tema-kehamilan" href="kehamilan.html">Kehamilan</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articleKehamilan/articleViewKehamilan01.html">
+                    <h3>Penyebab Ukuran Perut Ibu Hamil Tampak Besar atau Kecil</h3>
+                </a>
+                <p> Apakah Bumil tahu tidak apa yang membuat perut tampak besar atau kecil, bentuknya bulat atau
+                    melebar, dan letak perut tampak tinggi atau rendah? Nah, di bawah ini adalah beberapa hal yang dapat
+                    memengaruhi ukuran dan bentuk perut ibu hamil
+                </p>
+            </div>
+            <a class="selengkapnya" href="articleView/articleKehamilan/articleViewKehamilan01.html">Baca
+                Selengkapnya</a>
+        </div>
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://cdn-image.hipwee.com/wp-content/uploads/2019/06/hipwee-leisure-activity-relaxation-lying-down-playing-cute-boy-toddler-rug-casual-smartphone-technology_t20_wa0PPL-1024x576-750x422.jpg"
+                    alt="">
+                <a class="tema tema-parenting" href="parenting.html">Parenting</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articleParenting/articleViewParenting01.html">
+                    <h3>5 Dampak Negatif Andalkan Gadget Biar Anak Diam dan Nggak Rewel. Jangan Asal Kasih ya, Ma, Pa!
+                    </h3>
+                </a>
+                <p>Dewasa ini, hampir semua kemudahan kita dapatkan melalui teknologi yang ada. Mulai dari hal
+                    sehari-hari seperti resep masakan, memberi kabar dengan orang terdekat, melihat ramalan cuaca, dan
+                    bahkan pengasuhan anak pun menggunakan bantuan dari gadget. Namun, di balik nilai praktis dari
+                    teknologi tersebut masih tersimpan dampak yang dinilai cukup negatif dalam jangka panjang.
+                </p>
+            </div>
+            <a class="selengkapnya" href="articleView/articleParenting/articleViewParenting01.html">Baca
+                Selengkapnya</a>
+        </div>
+
+        <div class="all-article-cards">
+            <div class="thumb-img">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1570950852/attached_image/takut-menghadapi-persalinan-ini-trik-mengatasinya-alodokter.jpg"
+                    alt="">
+                <a class="tema tema-persalinan" href="persalinan.html">Persalinan</a>
+            </div>
+            <div class="thumb-content">
+                <a href="articleView/articlePersalinan/articleViewPaersalinan01.html">
+                    <h3>Alasan Bumil Tidak Perlu Takut Persalinan</h3>
+                </a>
+                <p> Dari semua informasi terkait persalinan yang Bumil dengar, belum tentu semuanya benar adanya. Jika
+                    beberapa hal tersebut membuat Bumil takut, coba konsultasikan lebih lanjut ke dokter atau bidan
+                    untuk mendapatkan kepastiannya
+                </p>
+            </div>
+
+            <a class="selengkapnya" href="articleView/articlePersalinan/articleViewPaersalinan01.html">Baca
+                Selengkapnya</a>
+        </div>
+
+    </section>
+    <!-- end main article -->
+
+    <!-- next button -->
+    <section class="next-btn">
+        <button type="submit">Selanjutnya</button>
+    </section>
+    <!-- end next button -->
+
+    <!-- scroll top box -->
+    <a class="scrollTop page-scroll" href="#home"><i class="fa fa-angle-up"></i></a>
+    <!-- end scroll top box -->
+
+    <!-- MODAL LOGIN -->
+
+    <!-- END MODAL LOGIN -->
+
+    <!-- footer -->
+    <footer>
+        <div class="top-footer">
+            <div class="inner-footer">
+
+                <div class="footer-items sosmed">
+                    <h2>Follow Us</h2>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com" target="blank"> <img
+                                src="https://img.icons8.com/color/40/000000/facebook-circled.png"></a>
+                        <a href="https://www.instagram.com/?hl=id" target="blank"><img
+                                src="https://img.icons8.com/color/40/000000/instagram-new.png"></a>
+                        <a href="https://plus.google.com/?hl=id" target="blank"><img
+                                src="https://img.icons8.com/color/40/000000/google-plus-squared.png"></i></a>
+                        <a href="https://twitter.com/login?lang=id" target="blank"><img
+                                src="https://img.icons8.com/color/40/000000/twitter.png"></a>
+                    </div>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Quick Links</h2>
+                    <div class="border"></div>
+                    <ul>
+                        <li><a href="aboutUs.html">Tentang Kami</a></li>
+                        <li><a href="formBBI.html">Berat Badan Ideal</a></li>
+                        <li><a href="formTBI.html">Tinggi Badan Ideal</a></li>
+                        <li><a href="formKI.html">Kalender Imunisasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Artikel</h2>
+                    <div class="border"></div>
+                    <ul>
+                        <li><a href="kehamilan.html">Kehamilan</a></li>
+                        <li><a href="persalinan.html">Persalinan</a></li>
+                        <li><a href="bayi.html">Bayi</a></li>
+                        <li><a href="parenting.html">Parenting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items contact">
+                    <h2>Contact Us</h2>
+                    <div class="border"></div>
+                    <p class="alamat">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>Jl. Kalimantan No.37, Krajan Timur,
+                        Sumbersari, Kec.
+                        Sumbersari, Kabupaten Jember, Jawa Timur 68121
+                    </p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>0331-28919</p>
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>fasilkom@unej.ac.id
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bottom-footer">
+            <p>Copyright &copy 2019 Bayiku. All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+
+</html>

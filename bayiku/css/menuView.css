@@ -1,0 +1,257 @@
+.menu-themes{
+    width: 100%;
+    margin-top: 62px;
+    margin-bottom: 30px;
+    padding: 15px 0;
+}
+
+@media (max-width:870px){
+    .menu-themes{
+        margin-top: 52px !important;
+    }
+}
+
+.menu-themes h2{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 767.98px) { 
+    .menu-themes{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 0;
+    }
+
+    .menu-themes h2{
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+ }
+
+
+
+/* pagination */
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.page ul{
+    position: relative;
+    background: #fff;
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2)
+}
+
+.prev{
+    margin-right: 25px;
+    color: #000;  
+}
+
+.next{
+    margin-left: 25px;
+    color: #000;
+}
+
+.prev:hover, .next:hover{
+    color: #fc4a1a;
+}
+
+.page ul li{
+    cursor: pointer;
+    line-height: 40px;
+    margin: 0 15px;
+}
+
+.page ul .page-number{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.page ul li a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-weight: 600;
+    border-radius: 50%;
+}
+
+.page ul .page-number:hover a,
+.page ul .page-number.active a{
+    background: #fc4a1a;
+    color: #fff;
+}
+
+
+.page-number ul li:first-child{
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 20px;
+}
+/* end pagination */
+
+@media (max-width: 730px){
+    
+    
+    .page ul{
+        padding: 10px !important;
+    }
+
+    .page ul .page-number{
+        width: 25px !important;
+        height: 25px !important;
+        line-height: 25px !important;
+    }
+
+    .page ul li{
+        line-height: 25px !important;
+        margin: 0 5px !important;
+    }
+
+    .prev{
+        margin-right: 15px !important;
+    }
+    
+    .next{
+        margin-left: 15px !important;
+    }
+    
+}
+
+
+
+.wrapper-specific-article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+.specific-article-cards{
+    margin: 15px;
+    width: 350px;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,.11);
+    border: 0 solid #dae1e7;
+    border-radius: 5px;
+}
+
+.specific-article-img{
+    overflow: hidden;
+    width: 350px;
+    height: 200px;
+}
+
+.specific-article-img img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.specific-article-title{
+    width: 100%;
+    padding: 15px;
+
+}
+
+.specific-article-title a{
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.specific-article-title p{
+    display: block;
+    color: #606f7b;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: .7px;
+    height: 96px;
+    overflow: hidden;
+}
+
+.specific-article-title-tag{
+    padding: 15px;
+}
+
+.specific-article-title-tag a{
+    margin-right: 10px;
+    background: #f1f5f8;
+    padding: 7px 10px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #606f7b;
+}
+
+@media (max-width: 780px){
+   
+    .specific-article-cards{
+        padding: 15px;
+        width: 100%;
+        margin: 7px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    }
+    
+    .specific-article-img{
+        width: 30%;
+        height: auto;
+        float: left;
+
+    }
+    
+    .specific-article-img img{
+        height: 100%;
+        border-radius: 5px 0 0 0;
+    }
+
+    .specific-article-title{
+        padding: 0 10px;
+        float: left;
+        width: 70%;
+    
+    }
+
+    .specific-article-title p{
+        display: none;
+    }
+
+    .specific-article-title-tag{
+        padding: 10px;
+        display: inline-block;
+
+    }
+    
+    .specific-article-title-tag a{
+        font-size: 16px;
+        
+    }
+
+    .specific-article-title a{
+        font-size: 18px;
+        font-weight: 600;
+        height: 41px;
+    }
+    
+}
+
+.tmbBorder{
+    border-bottom: 2px solid #fc4a1a;
+
+}
+
+.hpsBorder{
+    border-bottom: none;
+
+}
