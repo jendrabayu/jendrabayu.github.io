@@ -1,7 +1,7 @@
 class DataSource {
 
     static getMovies() {
-        return fetch('./movie.json')
+        return fetch('https://jendrabayu.github.io/cinemas/js/data/movie.json')
             .then(res => {
                 if (res.ok) {
                     return res.json()
@@ -45,7 +45,7 @@ class DataSource {
     }
 
     static getPage(page) {
-        return fetch(`../../pages/${page}.html`)
+        return fetch(`https://jendrabayu.github.io/cinemas/pages/${page}.html`)
             .then(res => {
                 if (res.ok) {
                     return res.text()
